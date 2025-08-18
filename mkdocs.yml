@@ -21,3 +21,5 @@ nav:
   - Home: index.md
   - Getting Started:
       - Quick Start: getting_started/quickstart/quickstart.md
+  - Assignments:
+      - Assignment 1: assignments/assignment-1.md
