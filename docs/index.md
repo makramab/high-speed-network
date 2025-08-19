@@ -1,5 +1,10 @@
 # htsim Network Simulator
 
+<figure markdown="span">
+  ![Image title](https://opengraph.githubassets.com/80aa7e13e0a31a9f73574983c717257927e2e751179d14a5a988acac61f18f65/Broadcom/csg-htsim)
+  <figcaption>htsim is now part of Broadcom</figcaption>
+</figure>
+
 htsim is a high-performance discrete event network simulator designed for datacenter networking research. It leverages optimized C++ implementation and specialized datacenter models to enable fast, accurate simulation of transport protocols and congestion control algorithms at scale.
 
 htsim supports comprehensive datacenter networking research across multiple dimensions:

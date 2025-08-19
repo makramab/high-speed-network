@@ -23,3 +23,14 @@ nav:
       - Quick Start: getting_started/quickstart/quickstart.md
   - Assignments:
       - Assignment 1: assignments/assignment-1.md
+
+markdown_extensions:
+  - attr_list
+  - admonition
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - pymdownx.blocks.caption
+

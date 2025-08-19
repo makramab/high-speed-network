@@ -60,6 +60,11 @@ This creates a traffic matrix file with the following parameters:
 - **Size 0** means infinite/continuous flows
 - **Start time 0** means all flows begin immediately
 
+<figure markdown="span">
+  ![Image title](https://i.imgur.com/FrB4rm3.png){ width="600" }
+  <figcaption>You can open perm_16n_16c_quickstart to see what the generated matrix looks like</figcaption>
+</figure>
+
 ### Step 2: Run Your First Experiment
 
 Now let's run an NDP experiment using this traffic matrix:
@@ -89,6 +94,11 @@ Starting simulation with 16 nodes...
 Simulation completed in X.XX seconds
 Results written to logout.dat
 ```
+
+<figure markdown="span">
+  ![Image title](https://i.imgur.com/aFp6Lte.png){ width="600" }
+  <figcaption>Make sure you are inside datacenter directory when running the command</figcaption>
+</figure>
 
 ### Step 3: Analyze the Results
 
@@ -121,6 +131,11 @@ This creates several files:
 - `quickstart_results_timeseries.dat` - Raw throughput data over time
 - `quickstart_results_plot.gp` - Gnuplot script for visualization
 - `quickstart_results_throughput.pdf` - Generated plot (if gnuplot installed)
+
+<figure markdown="span">
+  ![Image title](https://i.imgur.com/vhZpcXA.png){ width="600" }
+  <figcaption>One example figure that could be generated from htsim simulation</figcaption>
+</figure>
 
 ## **Understanding Your Results**
 
