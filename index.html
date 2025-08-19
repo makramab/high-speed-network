@@ -1,0 +1,1249 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="next" href="getting_started/quickstart/quickstart/">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.17">
+    
+    
+      
+        <title>High Speed Network</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#htsim-network-simulator" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="High Speed Network" class="md-header__button md-logo" aria-label="High Speed Network" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            High Speed Network
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/makramab/high-speed-network" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="High Speed Network" class="md-nav__button md-logo" aria-label="High Speed Network" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    High Speed Network
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/makramab/high-speed-network" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Start
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Components
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#event-driven-simulation-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Event-Driven Simulation Engine
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transport-protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transport Protocols
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datacenter-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Datacenter Infrastructure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modularity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modularity
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-simulation-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Simulation Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#protocol-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protocol Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experiment-variations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiment Variations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualizations-and-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualizations and Analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#research-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Research Applications
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Research Applications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#protocol-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protocol Development
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#academic-research" class="md-nav__link">
+    <span class="md-ellipsis">
+      Academic Research
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#industry-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Industry Applications
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publications-and-impact" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publications and Impact
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started-with-research" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started with Research
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="getting_started/quickstart/quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quick Start
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Assignments
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Assignments
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="assignments/assignment-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Assignment 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Start
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Components
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#event-driven-simulation-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Event-Driven Simulation Engine
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transport-protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transport Protocols
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datacenter-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Datacenter Infrastructure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modularity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modularity
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-simulation-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Simulation Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#protocol-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protocol Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experiment-variations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiment Variations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualizations-and-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualizations and Analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#research-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Research Applications
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Research Applications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#protocol-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protocol Development
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#academic-research" class="md-nav__link">
+    <span class="md-ellipsis">
+      Academic Research
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#industry-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Industry Applications
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publications-and-impact" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publications and Impact
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started-with-research" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started with Research
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="htsim-network-simulator">htsim Network Simulator</h1>
+<figure>
+  <img alt="Image title" src="https://opengraph.githubassets.com/80aa7e13e0a31a9f73574983c717257927e2e751179d14a5a988acac61f18f65/Broadcom/csg-htsim" />
+<br />
+<figcaption>htsim is now part of Broadcom</figcaption>
+</figure>
+<p>htsim is a high-performance discrete event network simulator designed for datacenter networking research. It leverages optimized C++ implementation and specialized datacenter models to enable fast, accurate simulation of transport protocols and congestion control algorithms at scale.</p>
+<p>htsim supports comprehensive datacenter networking research across multiple dimensions:</p>
+<table>
+  <tr>
+    <td><a href="#transport-protocols">TCP NewReno</a></td>
+    <td><a href="#transport-protocols">NDP (Near-optimal)</a></td>
+    <td><a href="#transport-protocols">Swift</a></td>
+ </tr>
+   <tr>
+    <td><a href="#transport-protocols">RoCE (RDMA)</a></td>
+    <td><a href="#transport-protocols">HPCC</a></td>
+    <td><a href="#transport-protocols">DCTCP</a></td>
+ </tr>
+ <tr>
+    <td><a href="#transport-protocols">EQDS</a></td>
+    <td><a href="#datacenter-topologies">FatTree Topology</a></td>
+    <td><a href="#datacenter-topologies">DragonFly</a></td>
+ </tr>
+ <tr>
+    <td><a href="#traffic-patterns">Permutation</a></td>
+    <td><a href="#traffic-patterns">Incast</a></td>
+    <td><a href="#traffic-patterns">All-to-All</a></td>
+ </tr>
+ <tr>
+    <td><a href="#routing-strategies">Source Routing</a></td>
+    <td><a href="#routing-strategies">ECMP</a></td>
+    <td><a href="#routing-strategies">Adaptive Routing</a></td>
+ </tr>
+</table>
+
+<p>Corresponding research papers and use cases can be found in <a href="http://nets.cs.pub.ro/~costin/files/mptcp-nsdi.pdf">Multipath TCP</a>, <a href="http://nets.cs.pub.ro/~costin/files/ndp.pdf">NDP</a>, and <a href="http://nets.cs.pub.ro/~costin/files/eqds.pdf">EQDS</a> publications. For implementation details, see the <a href="algorithm.md">algorithm overview</a> and <a href="architecture.md">architecture documentation</a>.</p>
+<h2 id="installation"><strong>Installation</strong></h2>
+<p>Installation requires only a modern C++ compiler with no external dependencies:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/Broadcom/csg-htsim.git
+<span class="nb">cd</span><span class="w"> </span>csg-htsim/sim
+make
+</code></pre></div>
+<p>For datacenter experiments, build the specialized simulators:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>datacenter
+make
+
+<span class="c1"># Available executables:</span>
+<span class="c1"># htsim_tcp, htsim_ndp, htsim_swift, htsim_roce, htsim_hpcc, htsim_eqds</span>
+</code></pre></div>
+<h2 id="quick-start"><strong>Quick Start</strong></h2>
+<p>We start with a simple NDP experiment on a 16-node datacenter network with permutation traffic:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Generate traffic matrix</span>
+<span class="nb">cd</span><span class="w"> </span>connection_matrices
+python3<span class="w"> </span>gen_permutation.py<span class="w"> </span>perm_16n_16c.cm<span class="w"> </span><span class="m">16</span><span class="w"> </span><span class="m">16</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span>
+
+<span class="c1"># Run NDP experiment</span>
+<span class="nb">cd</span><span class="w"> </span>..
+./htsim_ndp<span class="w"> </span>-nodes<span class="w"> </span><span class="m">16</span><span class="w"> </span>-tm<span class="w"> </span>connection_matrices/perm_16n_16c.cm<span class="w"> </span>-cwnd<span class="w"> </span><span class="m">50</span><span class="w"> </span>-strat<span class="w"> </span>ecmp_host<span class="w"> </span>-paths<span class="w"> </span><span class="m">16</span><span class="w"> </span>-log<span class="w"> </span>sink<span class="w"> </span>-q<span class="w"> </span><span class="m">50</span><span class="w"> </span>-end<span class="w"> </span><span class="m">1000</span>
+</code></pre></div>
+<p>After running the simulation, you can analyze the results:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># View summary statistics</span>
+../parse_output<span class="w"> </span>logout.dat<span class="w"> </span>-ndp<span class="w"> </span>-show
+
+<span class="c1"># Generate throughput plots</span>
+python3<span class="w"> </span>create_throughput_plot.py<span class="w"> </span>logout.dat<span class="w"> </span>ndp<span class="w"> </span>experiment_results
+</code></pre></div>
+<p>The simulator outputs detailed performance metrics including throughput, latency, queue utilization, and flow completion times for comprehensive protocol evaluation.</p>
+<div class="admonition tip">
+<p class="admonition-title">Multiple Protocols</p>
+<p>Replace <code>htsim_ndp</code> with <code>htsim_tcp</code>, <code>htsim_swift</code>, or any other protocol simulator to compare performance under identical conditions.</p>
+</div>
+<h2 id="core-components"><strong>Core Components</strong></h2>
+<p>htsim's modular architecture separates concerns for maximum flexibility and performance:</p>
+<h3 id="event-driven-simulation-engine">Event-Driven Simulation Engine</h3>
+<p>The core simulator provides picosecond-precision discrete event scheduling with optimized data structures for handling millions of events efficiently. The event system supports both absolute and relative time scheduling with sophisticated cancellation and rescheduling mechanisms.</p>
+<h3 id="transport-protocols">Transport Protocols</h3>
+<p>Each protocol implements its own congestion control algorithm while sharing common infrastructure:</p>
+<ul>
+<li><strong>TCP NewReno</strong>: Traditional AIMD congestion control with fast recovery</li>
+<li><strong>NDP</strong>: Pull-based protocol with return-to-sender and path diversity  </li>
+<li><strong>Swift</strong>: Delay-based congestion control with multi-subflow support</li>
+<li><strong>RoCE</strong>: Rate-based protocol with credit flow control for lossless networks</li>
+<li><strong>HPCC</strong>: High-precision control using in-band network telemetry</li>
+<li><strong>DCTCP</strong>: ECN-based protocol for datacenter environments</li>
+<li><strong>EQDS</strong>: Sophisticated scheduling with speculative transmission</li>
+</ul>
+<h3 id="datacenter-infrastructure">Datacenter Infrastructure</h3>
+<p>Comprehensive datacenter modeling including FatTree topologies, ECMP routing, PFC (Priority Flow Control), and realistic switch models with configurable buffer sizes and switching latencies.</p>
+<h2 id="modularity"><strong>Modularity</strong></h2>
+<p>By default, htsim experiments consist of topology generation, traffic matrix creation, protocol simulation, and result analysis run in sequence. However, the system assumes independence between these components, making htsim highly modular for research customization:</p>
+<p>You can swap out any of these components or customize them extensively. The following aspects are completely modular:</p>
+<ol>
+<li><strong><a href="protocols.md">Transport Protocols</a></strong> - Implement custom congestion control algorithms</li>
+<li><strong><a href="topologies.md">Network Topologies</a></strong> - Design specialized datacenter architectures  </li>
+<li><strong><a href="traffic.md">Traffic Patterns</a></strong> - Create realistic workload models</li>
+<li><strong><a href="routing.md">Routing Strategies</a></strong> - Develop adaptive forwarding mechanisms</li>
+<li><strong><a href="queuing.md">Queue Management</a></strong> - Customize buffer management and scheduling</li>
+<li><strong><a href="analysis.md">Logging and Analysis</a></strong> - Extract detailed performance metrics</li>
+</ol>
+<p>To learn more about the underlying simulation engine and customization options, see the <a href="architecture.md">architecture guide</a>.</p>
+<h2 id="overview"><strong>Overview</strong></h2>
+<p>htsim provides extensive functionality for datacenter networking research. Below you'll find comprehensive method overviews organized by common usage patterns.</p>
+<h3 id="common-simulation-commands">Common Simulation Commands</h3>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Run NDP experiment</td>
+<td><code>./htsim_ndp -nodes N -tm matrix.cm -strat ecmp_host</code></td>
+</tr>
+<tr>
+<td>Generate traffic matrix</td>
+<td><code>python3 gen_permutation.py out.cm N N 0 0 0</code></td>
+</tr>
+<tr>
+<td>Analyze results</td>
+<td><code>../parse_output logout.dat -ndp -show</code></td>
+</tr>
+<tr>
+<td>Create throughput plots</td>
+<td><code>python3 create_throughput_plot.py logout.dat ndp results</code></td>
+</tr>
+<tr>
+<td>Run multi-protocol comparison</td>
+<td><code>./compare_protocols.sh matrix.cm results/</code></td>
+</tr>
+<tr>
+<td>Generate incast traffic</td>
+<td><code>python3 gen_incast.py incast.cm N 1 2000000</code></td>
+</tr>
+<tr>
+<td>Test different queue sizes</td>
+<td><code>./htsim_ndp [params] -q 50</code></td>
+</tr>
+<tr>
+<td>Enable detailed logging</td>
+<td><code>./htsim_ndp [params] -log sink,queue,traffic</code></td>
+</tr>
+<tr>
+<td>Set simulation duration</td>
+<td><code>./htsim_ndp [params] -end 5000</code></td>
+</tr>
+<tr>
+<td>Configure routing strategy</td>
+<td><code>./htsim_ndp [params] -strat perm,ecmp_host,ecmp_ar</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="protocol-parameters">Protocol Parameters</h3>
+<p>After configuring your simulation, several parameters control protocol behavior. These parameters directly affect congestion control performance and should be tuned based on your experimental goals.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-cwnd N</code></td>
+<td>Initial congestion window size in packets</td>
+</tr>
+<tr>
+<td><code>-q N</code></td>
+<td>Queue size in packets for switch buffers</td>
+</tr>
+<tr>
+<td><code>-strat strategy</code></td>
+<td>Routing strategy: perm, ecmp_host, ecmp_ar, etc.</td>
+</tr>
+<tr>
+<td><code>-paths N</code></td>
+<td>Number of parallel paths for multipath protocols</td>
+</tr>
+<tr>
+<td><code>-mtu N</code></td>
+<td>Maximum transmission unit in bytes</td>
+</tr>
+<tr>
+<td><code>-end T</code></td>
+<td>Simulation duration in microseconds</td>
+</tr>
+<tr>
+<td><code>-log types</code></td>
+<td>Enable logging: sink, queue, traffic, switches</td>
+</tr>
+<tr>
+<td><code>-nodes N</code></td>
+<td>Network size (number of nodes in topology)</td>
+</tr>
+<tr>
+<td><code>-tm file</code></td>
+<td>Traffic matrix file specifying communication patterns</td>
+</tr>
+<tr>
+<td><code>-hop_latency T</code></td>
+<td>Per-hop wire latency in microseconds</td>
+</tr>
+</tbody>
+</table>
+<h3 id="experiment-variations">Experiment Variations</h3>
+<p>htsim supports diverse experimental scenarios for comprehensive protocol evaluation across different network conditions and traffic patterns.</p>
+<table>
+<thead>
+<tr>
+<th>Experiment Type</th>
+<th>Configuration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><a href="experiments/comparison.md">Protocol Comparison</a></strong></td>
+<td><code>./compare_protocols.sh traffic_matrix.cm results/</code></td>
+</tr>
+<tr>
+<td><strong><a href="experiments/traffic.md">Traffic Pattern Analysis</a></strong></td>
+<td><code>python3 gen_incast.py matrix.cm N sinks flow_size</code></td>
+</tr>
+<tr>
+<td><strong><a href="experiments/scaling.md">Topology Scaling</a></strong></td>
+<td><code>./htsim_ndp -nodes 64,128,256 -tm matrix.cm</code></td>
+</tr>
+<tr>
+<td><strong><a href="experiments/queues.md">Queue Sensitivity</a></strong></td>
+<td><code>./run_queue_sweep.sh 10,50,100,200 matrix.cm</code></td>
+</tr>
+<tr>
+<td><strong><a href="experiments/routing.md">Routing Strategy Evaluation</a></strong></td>
+<td><code>./htsim_ndp -strat perm,ecmp_host,ecmp_ar</code></td>
+</tr>
+<tr>
+<td><strong><a href="experiments/multipath.md">Multi-Path Load Balancing</a></strong></td>
+<td><code>./htsim_ndp -paths 1,4,8,16 -strat ecmp_host</code></td>
+</tr>
+<tr>
+<td><strong><a href="experiments/flows.md">Flow Size Distribution</a></strong></td>
+<td><code>python3 gen_mixed_flows.py matrix.cm sizes.dist</code></td>
+</tr>
+<tr>
+<td><strong><a href="experiments/failures.md">Network Failure Scenarios</a></strong></td>
+<td><code>./htsim_ndp -failure_links links.txt -failure_time T</code></td>
+</tr>
+<tr>
+<td><strong><a href="experiments/tuning.md">Congestion Control Tuning</a></strong></td>
+<td><code>./parameter_sweep.sh protocol param_range matrix.cm</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="visualizations-and-analysis">Visualizations and Analysis</h3>
+<p>Performance evaluation in networking research requires comprehensive visualization and statistical analysis capabilities to understand protocol behavior under different conditions.</p>
+<table>
+<thead>
+<tr>
+<th>Analysis Type</th>
+<th>Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Throughput Time Series</strong></td>
+<td><code>python3 create_throughput_plot.py logout.dat protocol results</code></td>
+</tr>
+<tr>
+<td><strong>Flow Completion Time CDF</strong></td>
+<td><code>python3 plot_fct_cdf.py logout.dat results</code></td>
+</tr>
+<tr>
+<td><strong>Queue Utilization Heatmap</strong></td>
+<td><code>python3 plot_queue_heatmap.py logout.dat results</code></td>
+</tr>
+<tr>
+<td><strong>Protocol Comparison</strong></td>
+<td><code>python3 compare_protocols.py results1/ results2/ comparison</code></td>
+</tr>
+<tr>
+<td><strong>Latency Distribution</strong></td>
+<td><code>python3 plot_latency_dist.py logout.dat results</code></td>
+</tr>
+<tr>
+<td><strong>Network Utilization</strong></td>
+<td><code>python3 plot_network_util.py logout.dat results</code></td>
+</tr>
+<tr>
+<td><strong>Congestion Analysis</strong></td>
+<td><code>python3 analyze_congestion.py logout.dat results</code></td>
+</tr>
+<tr>
+<td><strong>Path Diversity Metrics</strong></td>
+<td><code>python3 plot_path_usage.py logout.dat results</code></td>
+</tr>
+<tr>
+<td><strong>Statistical Summary</strong></td>
+<td><code>python3 generate_summary.py logout.dat &gt; summary.txt</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="research-applications"><strong>Research Applications</strong></h2>
+<p>htsim has been extensively used in networking research and protocol development across academia and industry:</p>
+<h3 id="protocol-development">Protocol Development</h3>
+<ul>
+<li><strong>Multipath TCP</strong>: Original IETF standardization performance evaluation</li>
+<li><strong>NDP</strong>: Complete protocol design and evaluation from conception to publication</li>
+<li><strong>EQDS</strong>: Advanced datacenter congestion control development</li>
+<li><strong>Swift</strong>: Delay-based congestion control algorithm validation</li>
+</ul>
+<h3 id="academic-research">Academic Research</h3>
+<ul>
+<li><strong>Datacenter Architecture Studies</strong>: FatTree, DragonFly, and BCube topology comparison</li>
+<li><strong>Congestion Control Evaluation</strong>: Comprehensive protocol performance analysis</li>
+<li><strong>Traffic Engineering</strong>: Load balancing and routing strategy optimization  </li>
+<li><strong>Network Buffer Sizing</strong>: Switch buffer requirements and performance trade-offs</li>
+</ul>
+<h3 id="industry-applications">Industry Applications</h3>
+<ul>
+<li><strong>Product Development</strong>: Protocol implementation validation before hardware deployment</li>
+<li><strong>Network Planning</strong>: Capacity planning and architecture design validation</li>
+<li><strong>Performance Optimization</strong>: Parameter tuning and configuration optimization</li>
+<li><strong>Failure Analysis</strong>: Network resilience and failure recovery mechanism testing</li>
+</ul>
+<h3 id="publications-and-impact">Publications and Impact</h3>
+<p>Major networking conferences have featured research using htsim including SIGCOMM, NSDI, CoNEXT, and INFOCOM. The simulator has enabled reproducible research with publicly available configurations and datasets.</p>
+<div class="admonition tip">
+<p class="admonition-title">Research Collaboration</p>
+<p>htsim's deterministic results and comprehensive logging make it ideal for reproducible research. Many published studies provide complete experimental configurations for replication.</p>
+</div>
+<h2 id="getting-started-with-research"><strong>Getting Started with Research</strong></h2>
+<p>For researchers new to htsim, we recommend the following progression:</p>
+<ol>
+<li><strong><a href="quickstart.md">Quick Start Guide</a></strong> - Basic simulation setup and execution</li>
+<li><strong><a href="tutorials/protocols.md">Protocol Tutorial</a></strong> - Understanding transport protocol implementations  </li>
+<li><strong><a href="tutorials/traffic.md">Traffic Modeling</a></strong> - Creating realistic workload patterns</li>
+<li><strong><a href="tutorials/analysis.md">Performance Analysis</a></strong> - Extracting meaningful insights from results</li>
+<li><strong><a href="tutorials/advanced.md">Advanced Experiments</a></strong> - Multi-factor studies and parameter sweeps</li>
+<li><strong><a href="tutorials/development.md">Custom Development</a></strong> - Implementing new protocols and features</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>

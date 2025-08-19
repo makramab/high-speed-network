@@ -1,0 +1,1347 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../..">
+      
+      
+        <link rel="next" href="../../../assignments/assignment-1/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.17">
+    
+    
+      
+        <title>Quick Start - High Speed Network</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#installation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="High Speed Network" class="md-header__button md-logo" aria-label="High Speed Network" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            High Speed Network
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Quick Start
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/makramab/high-speed-network" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="High Speed Network" class="md-nav__button md-logo" aria-label="High Speed Network" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    High Speed Network
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/makramab/high-speed-network" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Quick Start
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quick Start
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clone-the-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clone the Repository
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-the-simulator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build the Simulator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Start
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick Start">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-generate-a-traffic-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Generate a Traffic Matrix
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-run-your-first-experiment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Run Your First Experiment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-analyze-the-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Analyze the Results
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3: Analyze the Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Summary
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detailed-analysis-with-plots" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detailed Analysis with Plots
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-your-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Your Results
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding Your Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#throughput-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Throughput Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Metrics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-good-results-look-like" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Good Results Look Like
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Next Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compare-different-protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compare Different Protocols
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#try-different-traffic-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Try Different Traffic Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Try Different Traffic Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#incast-many-to-one" class="md-nav__link">
+    <span class="md-ellipsis">
+      Incast (Many-to-One)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#all-to-all" class="md-nav__link">
+    <span class="md-ellipsis">
+      All-to-All
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experiment-with-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiment with Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualization-with-gnuplot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualization with gnuplot
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-issues-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Issues &amp; Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Issues &amp; Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#build-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build Errors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runtime-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Runtime Issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analysis-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analysis Issues
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Assignments
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Assignments
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../assignments/assignment-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Assignment 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clone-the-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clone the Repository
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-the-simulator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build the Simulator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Start
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick Start">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-generate-a-traffic-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Generate a Traffic Matrix
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-run-your-first-experiment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Run Your First Experiment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-analyze-the-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Analyze the Results
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3: Analyze the Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Summary
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detailed-analysis-with-plots" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detailed Analysis with Plots
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-your-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Your Results
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding Your Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#throughput-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Throughput Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Metrics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-good-results-look-like" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Good Results Look Like
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Next Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compare-different-protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compare Different Protocols
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#try-different-traffic-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Try Different Traffic Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Try Different Traffic Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#incast-many-to-one" class="md-nav__link">
+    <span class="md-ellipsis">
+      Incast (Many-to-One)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#all-to-all" class="md-nav__link">
+    <span class="md-ellipsis">
+      All-to-All
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experiment-with-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiment with Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualization-with-gnuplot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualization with gnuplot
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-issues-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Issues &amp; Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Issues &amp; Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#build-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build Errors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runtime-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Runtime Issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analysis-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analysis Issues
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>Quick Start</h1>
+
+<h2 id="installation"><strong>Installation</strong></h2>
+<p>htsim is a high-performance discrete event network simulator written in C++ with zero external dependencies. Installation is straightforward and requires only a modern C++ compiler.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li><strong>C++ Compiler</strong>: g++ or clang with C++11 support</li>
+<li><strong>Operating System</strong>: Linux or macOS</li>
+<li><strong>Build Tools</strong>: make (typically pre-installed)</li>
+</ul>
+<h3 id="clone-the-repository">Clone the Repository</h3>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/Broadcom/csg-htsim.git
+<span class="nb">cd</span><span class="w"> </span>csg-htsim
+</code></pre></div>
+<h3 id="build-the-simulator">Build the Simulator</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Build the core simulation library</span>
+<span class="nb">cd</span><span class="w"> </span>sim
+make
+
+<span class="c1"># Build datacenter experiments</span>
+<span class="nb">cd</span><span class="w"> </span>datacenter
+make
+</code></pre></div>
+<p>After successful compilation, you should see several executables:</p>
+<div class="highlight"><pre><span></span><code>ls<span class="w"> </span>-la<span class="w"> </span>htsim_*
+<span class="c1"># Expected output:</span>
+<span class="c1"># htsim_tcp    - TCP NewReno simulator</span>
+<span class="c1"># htsim_ndp    - NDP (Near-optimal Datacenter Protocol) simulator  </span>
+<span class="c1"># htsim_swift  - Swift congestion control simulator</span>
+<span class="c1"># htsim_roce   - RoCE (RDMA over Converged Ethernet) simulator</span>
+<span class="c1"># htsim_hpcc   - HPCC (High Precision Congestion Control) simulator</span>
+<span class="c1"># htsim_eqds   - EQDS (Earliest Queue Discharge Service) simulator</span>
+</code></pre></div>
+<h2 id="quick-start"><strong>Quick Start</strong></h2>
+<p>We'll start with a simple experiment using NDP (Near-optimal Datacenter Protocol) on a 16-node network to demonstrate the basic workflow.</p>
+<h3 id="step-1-generate-a-traffic-matrix">Step 1: Generate a Traffic Matrix</h3>
+<p>Traffic matrices define the communication patterns between nodes. Let's create a permutation pattern where each node sends data to exactly one other node:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>connection_matrices
+python3<span class="w"> </span>gen_permutation.py<span class="w"> </span>perm_16n_16c_quickstart.cm<span class="w"> </span><span class="m">16</span><span class="w"> </span><span class="m">16</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span>
+</code></pre></div>
+<p>This creates a traffic matrix file with the following parameters:</p>
+<ul>
+<li><strong>16 nodes</strong> in the network</li>
+<li><strong>16 connections</strong> (one per node)  </li>
+<li><strong>Size 0</strong> means infinite/continuous flows</li>
+<li><strong>Start time 0</strong> means all flows begin immediately</li>
+</ul>
+<figure>
+  <img alt="Image title" src="https://i.imgur.com/FrB4rm3.png" width="600" />
+<br />
+<figcaption>You can open perm_16n_16c_quickstart to see what the generated matrix looks like</figcaption>
+</figure>
+<h3 id="step-2-run-your-first-experiment">Step 2: Run Your First Experiment</h3>
+<p>Now let's run an NDP experiment using this traffic matrix:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>..<span class="w"> </span><span class="c1"># back to datacenter directory</span>
+./htsim_ndp<span class="w"> </span>-nodes<span class="w"> </span><span class="m">16</span><span class="w"> </span>-tm<span class="w"> </span>connection_matrices/perm_16n_16c_quickstart.cm<span class="w"> </span>-cwnd<span class="w"> </span><span class="m">50</span><span class="w"> </span>-strat<span class="w"> </span>ecmp_host<span class="w"> </span>-paths<span class="w"> </span><span class="m">16</span><span class="w"> </span>-log<span class="w"> </span>sink<span class="w"> </span>-q<span class="w"> </span><span class="m">50</span><span class="w"> </span>-end<span class="w"> </span><span class="m">1000</span><span class="w"> </span>-mtu<span class="w"> </span><span class="m">4000</span>
+</code></pre></div>
+<p><strong>Parameter explanation:</strong></p>
+<ul>
+<li><code>-nodes 16</code>: Create a 16-node FatTree datacenter topology</li>
+<li><code>-tm [file]</code>: Use our generated traffic matrix</li>
+<li><code>-cwnd 50</code>: Initial congestion window of 50 packets</li>
+<li><code>-strat ecmp_host</code>: Use ECMP routing with host-based path selection</li>
+<li><code>-paths 16</code>: Allow up to 16 parallel paths per flow</li>
+<li><code>-log sink</code>: Enable throughput logging at receivers</li>
+<li><code>-q 50</code>: Set queue size to 50 packets</li>
+<li><code>-end 1000</code>: Run simulation for 1000 microseconds</li>
+<li><code>-mtu 4000</code>: Set MTU to 4000 bytes</li>
+</ul>
+<p><strong>Expected output:</strong></p>
+<div class="highlight"><pre><span></span><code>Starting simulation with 16 nodes...
+[PLACEHOLDER: Typical simulation progress output]
+Simulation completed in X.XX seconds
+Results written to logout.dat
+</code></pre></div>
+<figure>
+  <img alt="Image title" src="https://i.imgur.com/aFp6Lte.png" width="600" />
+<br />
+<figcaption>Make sure you are inside datacenter directory when running the command</figcaption>
+</figure>
+<h3 id="step-3-analyze-the-results">Step 3: Analyze the Results</h3>
+<h4 id="quick-summary">Quick Summary</h4>
+<p>Get average throughput for all flows:</p>
+<div class="highlight"><pre><span></span><code>../parse_output<span class="w"> </span>logout.dat<span class="w"> </span>-ndp<span class="w"> </span>-show
+</code></pre></div>
+<p><strong>Expected output:</strong></p>
+<div class="highlight"><pre><span></span><code>[PLACEHOLDER: Average throughput results]
+Flow throughputs: X.XX Gbps average
+Total network utilization: XX%
+</code></pre></div>
+<h4 id="detailed-analysis-with-plots">Detailed Analysis with Plots</h4>
+<p>Generate time-series throughput plots:</p>
+<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>create_throughput_plot.py<span class="w"> </span>logout.dat<span class="w"> </span>ndp<span class="w"> </span>quickstart_results
+</code></pre></div>
+<p>This creates several files:</p>
+<ul>
+<li><code>quickstart_results_timeseries.dat</code> - Raw throughput data over time</li>
+<li><code>quickstart_results_plot.gp</code> - Gnuplot script for visualization</li>
+<li><code>quickstart_results_throughput.pdf</code> - Generated plot (if gnuplot installed)</li>
+</ul>
+<figure>
+  <img alt="Image title" src="https://i.imgur.com/vhZpcXA.png" width="600" />
+<br />
+<figcaption>One example figure that could be generated from htsim simulation</figcaption>
+</figure>
+<h2 id="understanding-your-results"><strong>Understanding Your Results</strong></h2>
+<h3 id="throughput-data">Throughput Data</h3>
+<p>The timeseries data file contains four columns:</p>
+<div class="highlight"><pre><span></span><code># Time(ms) AvgThroughput(Gbps) TotalThroughput(Gbps) NumFlows
+0.250 [PLACEHOLDER] [PLACEHOLDER] 16
+0.500 [PLACEHOLDER] [PLACEHOLDER] 16
+0.750 [PLACEHOLDER] [PLACEHOLDER] 16
+</code></pre></div>
+<h3 id="performance-metrics">Performance Metrics</h3>
+<p>Key metrics to look for:</p>
+<ul>
+<li><strong>Average Throughput</strong>: Per-flow performance</li>
+<li><strong>Total Throughput</strong>: Network-wide data transfer rate  </li>
+<li><strong>Flow Completion Time</strong>: How long each flow takes (for finite flows)</li>
+<li><strong>Queue Utilization</strong>: Buffer usage at switches</li>
+</ul>
+<h3 id="what-good-results-look-like">What Good Results Look Like</h3>
+<ul>
+<li><strong>High throughput</strong>: Close to link capacity</li>
+<li><strong>Low latency</strong>: Fast flow completion</li>
+<li><strong>Fairness</strong>: Similar performance across flows</li>
+<li><strong>Stability</strong>: Consistent performance over time</li>
+</ul>
+<h2 id="next-steps"><strong>Next Steps</strong></h2>
+<h3 id="compare-different-protocols">Compare Different Protocols</h3>
+<p>Run the same experiment with different transport protocols:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># TCP NewReno</span>
+./htsim_tcp<span class="w"> </span>-nodes<span class="w"> </span><span class="m">16</span><span class="w"> </span>-tm<span class="w"> </span>connection_matrices/perm_16n_16c_quickstart.cm<span class="w"> </span>-q<span class="w"> </span><span class="m">100</span><span class="w"> </span>-log<span class="w"> </span>sink<span class="w"> </span>-end<span class="w"> </span><span class="m">1000</span>
+
+<span class="c1"># Swift congestion control</span>
+./htsim_swift<span class="w"> </span>-nodes<span class="w"> </span><span class="m">16</span><span class="w"> </span>-tm<span class="w"> </span>connection_matrices/perm_16n_16c_quickstart.cm<span class="w"> </span>-cwnd<span class="w"> </span><span class="m">50</span><span class="w"> </span>-log<span class="w"> </span>sink<span class="w"> </span>-end<span class="w"> </span><span class="m">1000</span>
+
+<span class="c1"># RoCE</span>
+./htsim_roce<span class="w"> </span>-nodes<span class="w"> </span><span class="m">16</span><span class="w"> </span>-tm<span class="w"> </span>connection_matrices/perm_16n_16c_quickstart.cm<span class="w"> </span>-q<span class="w"> </span><span class="m">200</span><span class="w"> </span>-log<span class="w"> </span>sink<span class="w"> </span>-end<span class="w"> </span><span class="m">1000</span>
+</code></pre></div>
+<h3 id="try-different-traffic-patterns">Try Different Traffic Patterns</h3>
+<h4 id="incast-many-to-one">Incast (Many-to-One)</h4>
+<p>Simulates scenarios like distributed storage or web server responses:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>connection_matrices
+python3<span class="w"> </span>gen_incast.py<span class="w"> </span>incast_16n.cm<span class="w"> </span><span class="m">16</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2000000</span><span class="w">  </span><span class="c1"># 15 senders to 1 receiver, 2MB flows</span>
+<span class="nb">cd</span><span class="w"> </span>..
+./htsim_ndp<span class="w"> </span>-nodes<span class="w"> </span><span class="m">16</span><span class="w"> </span>-tm<span class="w"> </span>connection_matrices/incast_16n.cm<span class="w"> </span>-cwnd<span class="w"> </span><span class="m">50</span><span class="w"> </span>-strat<span class="w"> </span>ecmp_host<span class="w"> </span>-log<span class="w"> </span>sink<span class="w"> </span>-end<span class="w"> </span><span class="m">2000</span>
+</code></pre></div>
+<h4 id="all-to-all">All-to-All</h4>
+<p>High network utilization scenario:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>connection_matrices<span class="w">  </span>
+python3<span class="w"> </span>gen_serial_alltoall.py<span class="w"> </span>alltoall_16n.cm<span class="w"> </span><span class="m">16</span><span class="w"> </span><span class="m">1000000</span><span class="w">  </span><span class="c1"># 1MB flows between all pairs</span>
+<span class="nb">cd</span><span class="w"> </span>..
+./htsim_ndp<span class="w"> </span>-nodes<span class="w"> </span><span class="m">16</span><span class="w"> </span>-tm<span class="w"> </span>connection_matrices/alltoall_16n.cm<span class="w"> </span>-cwnd<span class="w"> </span><span class="m">30</span><span class="w"> </span>-strat<span class="w"> </span>ecmp_host<span class="w"> </span>-log<span class="w"> </span>sink<span class="w"> </span>-end<span class="w"> </span><span class="m">5000</span>
+</code></pre></div>
+<h3 id="experiment-with-parameters">Experiment with Parameters</h3>
+<p>Try different configurations to see their impact:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Larger network (if you have time)</span>
+python3<span class="w"> </span>connection_matrices/gen_permutation.py<span class="w"> </span>perm_64n.cm<span class="w"> </span><span class="m">64</span><span class="w"> </span><span class="m">64</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span>
+./htsim_ndp<span class="w"> </span>-nodes<span class="w"> </span><span class="m">64</span><span class="w"> </span>-tm<span class="w"> </span>connection_matrices/perm_64n.cm<span class="w"> </span>-cwnd<span class="w"> </span><span class="m">50</span><span class="w"> </span>-strat<span class="w"> </span>ecmp_host<span class="w"> </span>-log<span class="w"> </span>sink<span class="w"> </span>-end<span class="w"> </span><span class="m">1000</span>
+
+<span class="c1"># Different queue sizes</span>
+./htsim_ndp<span class="w"> </span>-nodes<span class="w"> </span><span class="m">16</span><span class="w"> </span>-tm<span class="w"> </span>connection_matrices/perm_16n_16c_quickstart.cm<span class="w"> </span>-q<span class="w"> </span><span class="m">10</span><span class="w"> </span>-log<span class="w"> </span>sink<span class="w"> </span>-end<span class="w"> </span><span class="m">1000</span><span class="w">   </span><span class="c1"># Small buffers</span>
+./htsim_ndp<span class="w"> </span>-nodes<span class="w"> </span><span class="m">16</span><span class="w"> </span>-tm<span class="w"> </span>connection_matrices/perm_16n_16c_quickstart.cm<span class="w"> </span>-q<span class="w"> </span><span class="m">200</span><span class="w"> </span>-log<span class="w"> </span>sink<span class="w"> </span>-end<span class="w"> </span><span class="m">1000</span><span class="w">  </span><span class="c1"># Large buffers</span>
+
+<span class="c1"># Different routing strategies</span>
+./htsim_ndp<span class="w"> </span>-nodes<span class="w"> </span><span class="m">16</span><span class="w"> </span>-tm<span class="w"> </span>connection_matrices/perm_16n_16c_quickstart.cm<span class="w"> </span>-strat<span class="w"> </span>perm<span class="w"> </span>-log<span class="w"> </span>sink<span class="w"> </span>-end<span class="w"> </span><span class="m">1000</span><span class="w">      </span><span class="c1"># Source routing</span>
+./htsim_ndp<span class="w"> </span>-nodes<span class="w"> </span><span class="m">16</span><span class="w"> </span>-tm<span class="w"> </span>connection_matrices/perm_16n_16c_quickstart.cm<span class="w"> </span>-strat<span class="w"> </span>ecmp_ar<span class="w"> </span>-log<span class="w"> </span>sink<span class="w"> </span>-end<span class="w"> </span><span class="m">1000</span><span class="w">   </span><span class="c1"># Adaptive routing</span>
+</code></pre></div>
+<h3 id="visualization-with-gnuplot">Visualization with gnuplot</h3>
+<p>If you have gnuplot installed, generate publication-quality plots:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Install gnuplot (if needed)</span>
+<span class="c1"># Ubuntu/Debian: sudo apt-get install gnuplot</span>
+<span class="c1"># macOS: brew install gnuplot</span>
+
+<span class="c1"># Generate plots</span>
+gnuplot<span class="w"> </span>quickstart_results_plot.gp
+open<span class="w"> </span>quickstart_results_throughput.pdf<span class="w">  </span><span class="c1"># macOS</span>
+<span class="c1"># or use your preferred PDF viewer</span>
+</code></pre></div>
+<h2 id="common-issues-troubleshooting"><strong>Common Issues &amp; Troubleshooting</strong></h2>
+<h3 id="build-errors">Build Errors</h3>
+<p><strong>Problem</strong>: Compilation fails with C++11 errors</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Solution: Ensure you have a modern compiler</span>
+g++<span class="w"> </span>--version<span class="w">  </span><span class="c1"># Should be 4.8+ or equivalent clang</span>
+</code></pre></div>
+<p><strong>Problem</strong>: "make: command not found"</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Solution: Install build tools</span>
+<span class="c1"># Ubuntu/Debian: sudo apt-get install build-essential</span>
+<span class="c1"># macOS: Install Xcode Command Line Tools</span>
+</code></pre></div>
+<h3 id="runtime-issues">Runtime Issues</h3>
+<p><strong>Problem</strong>: Simulation runs but no output generated</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Check if you included logging flags</span>
+./htsim_ndp<span class="w"> </span>-nodes<span class="w"> </span><span class="m">16</span><span class="w"> </span>-tm<span class="w"> </span>your_matrix.cm<span class="w"> </span>-log<span class="w"> </span>sink<span class="w"> </span>-end<span class="w"> </span><span class="m">1000</span>
+<span class="c1">#                                        ^^^^^^^^^ Required for analysis</span>
+</code></pre></div>
+<p><strong>Problem</strong>: "Traffic matrix file not found"</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Ensure file exists and path is correct</span>
+ls<span class="w"> </span>-la<span class="w"> </span>connection_matrices/your_file.cm
+<span class="c1"># Use absolute path if needed</span>
+./htsim_ndp<span class="w"> </span>-tm<span class="w"> </span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/connection_matrices/your_file.cm<span class="w"> </span><span class="o">[</span>other<span class="w"> </span>options<span class="o">]</span>
+</code></pre></div>
+<p><strong>Problem</strong>: Very low throughput results</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Check queue sizes - too small queues cause drops</span>
+./htsim_ndp<span class="w"> </span><span class="o">[</span>options<span class="o">]</span><span class="w"> </span>-q<span class="w"> </span><span class="m">100</span><span class="w">  </span><span class="c1"># Try larger queue sizes</span>
+
+<span class="c1"># Check simulation duration - might be too short</span>
+./htsim_ndp<span class="w"> </span><span class="o">[</span>options<span class="o">]</span><span class="w"> </span>-end<span class="w"> </span><span class="m">5000</span><span class="w">  </span><span class="c1"># Run longer simulation</span>
+</code></pre></div>
+<h3 id="analysis-issues">Analysis Issues</h3>
+<p><strong>Problem</strong>: parse_output not found</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Build the parser</span>
+<span class="nb">cd</span><span class="w"> </span>sim
+make<span class="w"> </span>parse_output
+
+<span class="c1"># Or use relative path</span>
+../parse_output<span class="w"> </span>logout.dat<span class="w"> </span>-ndp<span class="w"> </span>-show
+</code></pre></div>
+<p><strong>Problem</strong>: Python plotting script fails</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Check Python version</span>
+python3<span class="w"> </span>--version<span class="w">  </span><span class="c1"># Should be 3.6+</span>
+
+<span class="c1"># Try with explicit path</span>
+python3<span class="w"> </span>/full/path/to/create_throughput_plot.py<span class="w"> </span>logout.dat<span class="w"> </span>ndp<span class="w"> </span>results
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Getting Help</p>
+<ul>
+<li>Check the <a href="https://github.com/Broadcom/csg-htsim/wiki">wiki</a> for detailed documentation</li>
+<li>Look at example experiments in <code>sim/EXAMPLES/</code> directory</li>
+<li>Examine existing traffic matrices in <code>connection_matrices/</code> for patterns</li>
+<li>Use smaller networks (4-8 nodes) for faster debugging</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Performance Note</p>
+<p>Large simulations (1000+ nodes) can take significant time and memory. Start small and scale up gradually.</p>
+</div>
+<h2 id="whats-next"><strong>What's Next?</strong></h2>
+<p>Now that you've run your first htsim experiment, you can:</p>
+<ol>
+<li><strong>Explore the research examples</strong> in <code>sim/EXAMPLES/</code> directory</li>
+<li><strong>Read the detailed documentation</strong> to understand protocol internals</li>
+<li><strong>Run the complete experiment suites</strong> in the <code>experiments/</code> directory</li>
+<li><strong>Develop your own transport protocols</strong> using the existing implementations as templates</li>
+<li><strong>Create custom traffic patterns</strong> for your specific research needs</li>
+</ol>
+<p>Happy simulating! 🚀</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>
